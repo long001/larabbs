@@ -15,3 +15,31 @@ if(!function_exists('make_excerpt')){
     }
 }
 
+if (!function_exists('manage_contents')) {
+    function manage_contents()
+    {
+        return Auth::check() && Auth::user()->can('manage_contents');
+    }
+}
+
+if (!function_exists('manage_users')) {
+    function manage_users()
+    {
+        return Auth::check() && Auth::user()->can('manage_users');
+    }
+}
+
+if (!function_exists('administrator_users_avatar')) {
+    function administrator_users_avatar($avatar, $model)
+    {
+        return empty($avatar) ? 'N/A' : '<img src="'.$avatar.'" width="40">';
+    }
+}
+
+if (!function_exists('administrator_users_name')) {
+    function administrator_users_name($name, $model)
+    {
+        return '<a href="/users/'.$model->id.'" target=_blank>'.$name.'</a>';
+    }
+}
+
