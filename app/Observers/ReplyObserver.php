@@ -32,4 +32,9 @@ class ReplyObserver
 //        $reply->topic->increment('reply_count', 1); // 回复的话题
 //        dd(\DB::getQueryLog());
     }
+
+    public function deleted(Reply $reply)
+    {
+        $reply->topic->decrement('reply_count', 1);
+    }
 }
