@@ -6,6 +6,7 @@ use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Auth;
 use Spatie\Permission\Traits\HasRoles;
+use App\Models\Traits\ActiveUserHelper;
 
 class User extends Authenticatable
 {
@@ -13,6 +14,7 @@ class User extends Authenticatable
         notify as protected laravelNotify;
     }
     use HasRoles;
+    use ActiveUserHelper;
 
     public function notify($instance)
     {
