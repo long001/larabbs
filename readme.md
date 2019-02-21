@@ -1,3 +1,8 @@
+git clone ...  
+composer install   
+php artisan cache:clear  
+php artisan migrate --seed  
+
 ### 这是 laravel 开发实战的第二篇   
 
 #### 从技能角度看，实践了以下技能： 
@@ -73,4 +78,4 @@
 65. 自定义中间件来统计用户最后访问时间；
 66. 使用 Redis 哈希表来缓解数据库压力 —— NoSQL 数据库的一种用例；
 
-
+---
