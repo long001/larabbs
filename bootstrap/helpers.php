@@ -43,3 +43,23 @@ if (!function_exists('administrator_users_name')) {
     }
 }
 
+if (!function_exists('role_permissions_output')) {
+    function role_permissions_output($value, $model) {
+        $model->load('permissions');
+        $result = [];
+        foreach ($model->permissions as $permission) {
+            $result[] = $permission->name;
+        }
+
+        return empty($result) ? 'N/A' : implode($result, ' | ');
+    }
+}
+
+if (!function_exists('role_operation_output')) {
+    function role_operation_output($value, $model) {
+        return $value;
+    }
+}
+
+
+
