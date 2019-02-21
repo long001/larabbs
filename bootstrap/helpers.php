@@ -149,3 +149,21 @@ if (!function_exists('replay_topic_output')) {
         return '<div style="max-width:260px">' . model_admin_link(e($model->topic->title), $model->topic) . '</div>';
     }
 }
+
+if (!function_exists('before_save')) {
+    function before_save(&$data)
+    {
+        // 为网站名称加上后缀，加上判断是为了防止多次添加
+        if (strpos($data['site_name'], 'Powered by LaraBBS') === false) {
+            $data['site_name'] .= ' - Powered by LaraBBS';
+        }
+    }
+}
+
+if (!function_exists('clear_cache_action')) {
+    function clear_cache_action(&$data)
+    {
+        \Artisan::call('cache:clear');
+        return true;
+    }
+}
