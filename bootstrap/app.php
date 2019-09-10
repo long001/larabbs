@@ -51,6 +51,7 @@ $app->singleton(
 | This script returns the application instance. The instance is given to
 | the calling script so we can separate the building of the instances
 | from the actual running of the application and sending responses.
+| 我们可以将实例的构建与应用程序的实际运行和发送响应分离开来
 |
 */
 

@@ -3,11 +3,13 @@
         <div class="navbar-header">
 
             <!-- Collapsed Hamburger -->
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse">
+            <button type="button" class="navbar-toggle collapsed" 
+				 style="padding: 7px 6px; margin-top: 10px; background-color: transparent; border: none;"
+				data-toggle="collapse" data-target="#app-navbar-collapse">
                 <span class="sr-only">Toggle Navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
+                <span class="icon-bar" style="width: 17px;"></span>
+                <span class="icon-bar" style="width: 17px;"></span>
+                <span class="icon-bar" style="width: 17px;"></span>
             </button>
 
             <!-- Branding Image -->
